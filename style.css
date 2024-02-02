@@ -15,6 +15,24 @@ body {
 
 /*------------------------------*/
 
+#title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 55vw;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    
+}
+
+h1, h2 {
+    color: white;
+}
+
+
+
 #general-wrapper {
 display: flex;
 flex-direction: column;
