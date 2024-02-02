@@ -31,7 +31,7 @@ decreaseButton.addEventListener("mouseout", () => {
 decreaseButton.addEventListener("click", () => {
     clearInterval(increaseIntervalId)
     clearInterval(decreaseIntervalId)
-    decreaseIntervalId = setInterval(decreaseFunction, 100);
+    decreaseIntervalId = setInterval(decreaseFunction, 1000);
     indicators.forEach(indicator => {
         indicator.style.background = "red";
         decreaseButton.style.background = "red";
@@ -62,8 +62,7 @@ resetButton.addEventListener("mousedown", () => {
 });
 
 resetButton.addEventListener("click", () => {
-    console.log("click reset button")
-    resetFunction()
+    resetFunction(increaseIntervalId, decreaseIntervalId)
     indicators.forEach(indicator => {
         indicator.style.background = "rgba(0, 0, 0, 0)";
     })
@@ -95,7 +94,7 @@ increaseButton.addEventListener("mousedown", () => {
 increaseButton.addEventListener("click", () => {
     clearInterval(increaseIntervalId)
     clearInterval(decreaseIntervalId)
-    increaseIntervalId = setInterval(increaseFunction, 100);
+    increaseIntervalId = setInterval(increaseFunction, 1000);
     indicators.forEach(indicator => {
         indicator.style.background = "rgb(0, 180, 0)";
 })

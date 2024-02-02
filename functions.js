@@ -14,9 +14,9 @@ export const decreaseFunction = () => {
     currentNumberElement.innerText = currentNumber;
 };
 
-export const resetFunction = () => {
-    clearInterval(increaseIntervalId);
-    clearInterval(decreaseIntervalId);
+export const resetFunction = (a, b) => {
+    clearInterval(a);
+    clearInterval(b);
     let currentNumberElement = document.querySelector("#current-number");
     currentNumber = 0
     currentNumberElement.innerText = currentNumber;
